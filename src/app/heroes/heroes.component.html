@@ -1,0 +1,13 @@
+<!-- 
+<label>name: 
+  <input  [(ngModel)]="hero.name" placeholder="enter name here"/>
+</label> -->
+
+<h1 *ngIf="selectedHero"> 
+  Selected Hero: {{selectedHero.name | uppercase}}
+</h1>
+
+<li *ngFor="let h of heroes" (click)="selectZalaKi(h)" [class.selectKlaRe]="h === selectedHero">
+  <h3>{{h.name}}</h3>
+  <h4>{{h.id}}</h4>
+</li>

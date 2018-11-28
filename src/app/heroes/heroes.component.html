@@ -4,7 +4,8 @@
 </label> -->
 
 <h1 *ngIf="selectedHero"> 
-  Selected Hero: {{selectedHero.name | uppercase}}
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+{{selectedHero.name}}
 </h1>
 
 <li *ngFor="let h of heroes" (click)="selectZalaKi(h)" [class.selectKlaRe]="h === selectedHero">
